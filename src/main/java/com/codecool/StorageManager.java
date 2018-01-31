@@ -1,20 +1,26 @@
 package com.codecool;
 
-public class StorageManager implements StorageCapable {
+import java.util.List;
 
-    public String addStorage(StorageCapable storage) {
-        return "";
+public class StorageManager {
+
+    private PersistentStore storage;
+
+    public void addStorage(StorageCapable storage) {
+        this.storage = (PersistentStore) storage;
     }
 
     public void addCDProduct(String name, int price, int tracks) {
-
+        CDProduct cd = new CDProduct(name, price, tracks);
+        storage.store(cd);
     }
 
     public void addBookProduct(String name, int price, int pages) {
-
+        BookProduct book = new BookProduct(name, price, pages);
+        storage.store(book);
     }
 
-    public String lisProducts() {
+    public String listProducts() {
         return "";
     }
 
