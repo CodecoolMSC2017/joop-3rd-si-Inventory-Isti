@@ -18,7 +18,7 @@ import java.util.*;
 public abstract class Store implements StorageCapable {
 
     private void saveToXml(Product product) throws ParserConfigurationException, IOException, SAXException, TransformerException {
-        File file = new File("data.xml");
+        File file = new File("src/main/resources/products.xml");
         DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
         Document doc = null;
@@ -66,7 +66,7 @@ public abstract class Store implements StorageCapable {
     }
 
     public List<Product> loadProducts() {
-        File file = new File("data.xml");
+        File file = new File("src/main/resources/products.xml");
         DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder docBuilder = null;
         try {
