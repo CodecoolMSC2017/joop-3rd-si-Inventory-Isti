@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Products>
+    <Product name="valami" price="200" size="12" type="book"/>
+</Products>
