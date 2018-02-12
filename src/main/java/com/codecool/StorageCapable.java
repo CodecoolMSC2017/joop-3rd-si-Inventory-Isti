@@ -13,5 +13,5 @@ public interface StorageCapable {
 
     public void storeCDProduct(String name, int price, int tracks) throws ParserConfigurationException, TransformerException, SAXException, IOException;
 
-    public void storeBookProduct(String name, int prince, int pages) throws ParserConfigurationException, TransformerException, SAXException, IOException;
+    public void storeBookProduct(String name, int price, int pages) throws ParserConfigurationException, TransformerException, SAXException, IOException;
 }
