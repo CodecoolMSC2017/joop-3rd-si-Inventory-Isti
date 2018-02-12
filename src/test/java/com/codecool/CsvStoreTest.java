@@ -18,22 +18,22 @@ class CsvStoreTest {
 
     @Test
     void getAllProduct() {
-        assertEquals(store.getAllProduct().size(), 1);
+        assertEquals(2, store.getAllProduct().size());
         BookProduct book = (BookProduct) store.getAllProduct().get(0);
 
-        assertEquals(book.getName(), "valami");
-        assertEquals(book.getPrice(), 200);
-        assertEquals(book.getNumOfPages(), 12);
+        assertEquals("valami", book.getName());
+        assertEquals(200, book.getPrice());
+        assertEquals(12, book.getNumOfPages());
     }
 
     @Test
     void storeCDProduct() {
         store.storeCDProduct("testCD", 192, 54);
-        CDProduct cd = (CDProduct) store.getAllProduct().get(1);
+        CDProduct cd = (CDProduct) store.getAllProduct().get(2);
 
-        assertEquals(cd.getName(), "testCD");
-        assertEquals(cd.getPrice(), 192);
-        assertEquals(cd.getNumOfTracks(), 54);
+        assertEquals("testCD", cd.getName());
+        assertEquals(192, cd.getPrice());
+        assertEquals(54, cd.getNumOfTracks());
     }
 
     @Test
@@ -41,8 +41,8 @@ class CsvStoreTest {
         store.storeBookProduct("testBook", 152, 24);
         BookProduct book = (BookProduct) store.getAllProduct().get(1);
 
-        assertEquals(book.getName(), "testBook");
-        assertEquals(book.getPrice(), 152);
-        assertEquals(book.getNumOfPages(), 24);
+        assertEquals("testBook", book.getName());
+        assertEquals(152, book.getPrice());
+        assertEquals(24, book.getNumOfPages());
     }
 }
