@@ -61,13 +61,9 @@ public class CsvStore implements StorageCapable {
             sb.append(book.getNumOfPages() + ",");
             sb.append("book\n");
         }
-        FileWriter fileWriter = null;
+        FileWriter fileWriter;
         try {
             fileWriter = new FileWriter("src/main/resources/products.csv", true);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        try {
             fileWriter.write(sb.toString());
         } catch (IOException e) {
             e.printStackTrace();
