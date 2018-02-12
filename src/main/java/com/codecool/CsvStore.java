@@ -65,6 +65,7 @@ public class CsvStore implements StorageCapable {
         try {
             fileWriter = new FileWriter("src/main/resources/products.csv", true);
             fileWriter.write(sb.toString());
+            fileWriter.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
